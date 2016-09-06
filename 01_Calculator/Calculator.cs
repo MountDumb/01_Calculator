@@ -47,7 +47,7 @@
             return result;
         }
 
-        public static int Faculty(int f)
+        public static int Factorial(int f)
         {
             int result = 1;
             for (int i = f; i > 0 ; i--)

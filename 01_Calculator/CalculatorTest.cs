@@ -64,10 +64,10 @@ namespace _01_Calculator
         public void Factorial()
 
         {
-            Assert.AreEqual(6, Calculator.Faculty(3));
-            Assert.AreEqual(479001600, Calculator.Faculty(12));
-            Assert.AreEqual(362880, Calculator.Faculty(9));
-            Assert.AreEqual(3628800, Calculator.Faculty(10));
+            Assert.AreEqual(6, Calculator.Factorial(3));
+            Assert.AreEqual(479001600, Calculator.Factorial(12));
+            Assert.AreEqual(362880, Calculator.Factorial(9));
+            Assert.AreEqual(3628800, Calculator.Factorial(10));
             //# http://en.wikipedia.org/wiki/Factorial
             //  it "computes the factorial of 0"
             //  it "computes the factorial of 1"
