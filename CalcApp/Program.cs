@@ -13,10 +13,10 @@ namespace CalcApp
         {
             bool running = true;
             while (running == true)
-            {
+            { 
                 //Console.WriteLine("1: addition 2: Subtraction");
                 //int route = int.Parse(Console.ReadLine());
-                int route = Add();
+                int route = Menu();
                 switch (route)
                 {
                     case 1:
@@ -65,10 +65,10 @@ namespace CalcApp
 
         }
 
-        static int Add()
-        {
+        static int Menu()
+        { 
             int a = new int();
-            Console.WriteLine("1: addition 2: Subtraktion 9: Exit");
+            Console.WriteLine("1: addition\n\r2: Subtraktion\n\r9: Exit");
             try
             {
                 a = int.Parse(Console.ReadLine());
