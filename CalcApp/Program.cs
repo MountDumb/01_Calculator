@@ -11,58 +11,74 @@ namespace CalcApp
     {
         static void Main(string[] args)
         {
-            //Console.WriteLine("1: addition 2: Subtraction");
-            //int route = int.Parse(Console.ReadLine());
-            int route = Add();
-            switch (route)
-            {
-                case 1:
+            bool running = true;
+            while (running == true)
+            { 
+                //Console.WriteLine("1: addition 2: Subtraction");
+                //int route = int.Parse(Console.ReadLine());
+                int route = Menu();
+                switch (route)
+                {
+                    case 1:
 
 
-                    int a = new int();
-                    int b = new int();
+                        int a = new int();
+                        int b = new int();
 
-                    Console.WriteLine("Tal 1:");
-                    try
-                    {
-                        a = int.Parse(Console.ReadLine());
-                    }
-                    catch
-                    {
-                        Console.WriteLine("et tal, tak");
-                        goto case 1;
-                    }
+                        Console.WriteLine("Tal 1:");
+                        try
+                        {
+                            a = int.Parse(Console.ReadLine());
+                        }
+                        catch
+                        {
+                            Console.WriteLine("et tal, tak");
+                            goto case 1;
+                        }
 
-                    Console.WriteLine("Tal 2:");
-                    try
-                    {
-                        b = int.Parse(Console.ReadLine());
-                    }
-                    catch
-                    {
-                        Console.WriteLine("et tal, tak");
-                        goto case 1;
-                    }
+                        Console.WriteLine("Tal 2:");
+                        try
+                        {
+                            b = int.Parse(Console.ReadLine());
+                        }
+                        catch
+                        {
+                            Console.WriteLine("et tal, tak");
+                            goto case 1;
+                        }
 
-                    int v = Calculator.Add(a, b);
+                        int v = Calculator.Add(a, b);
 
-                    Console.WriteLine("resultatet er: " + v);
-                    Console.ReadLine();
+                        Console.WriteLine("resultatet er: " + v);
+                        Console.ReadLine();
 
 
-                    break;
+                        break;
+
+                    case 9:
+                        running = false;
+                        break;
+                }
             }
-
 
                         
 
         }
 
-        static int Add()
-        {
-            Console.WriteLine("1: addition 2: Subtraktion");
-            return int.Parse(Console.ReadLine());
-           
+        static int Menu()
+        { 
+            int a = new int();
+            Console.WriteLine("1: addition\n\r2: Subtraktion\n\r9: Exit");
+            try
+            {
+                a = int.Parse(Console.ReadLine());
+            }
+            catch
+            {
+                Console.WriteLine("prøv igen");
+            }
+
+            return a;
         }
     }
 }
